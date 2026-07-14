@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Cadence</title>
+  <meta name="theme-color" content="#8E3B46" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Cadence" />
+  <style>html,body{margin:0;background:#FBF6F4;-webkit-tap-highlight-color:transparent;}#root{min-height:100vh;}</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js").catch(function(){});
+      });
+    }
+  </script>
+</body>
+</html>
